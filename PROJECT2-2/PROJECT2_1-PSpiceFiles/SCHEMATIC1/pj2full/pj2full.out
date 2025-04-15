@@ -1,0 +1,300 @@
+
+**** 12/18/24 13:27:23 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pj2full"  [ c:\cadence\spb_17.2\save\project2_1-pspicefiles\schematic1\pj2full.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pj2full.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../project2_1-pspicefiles/project2_1.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 0.01u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PROJECT2_1
+M_M1         N00763 N00763 N00741 N00741 ORBIT2L2P  
++ L=2u  
++ W=20u         
+M_M2         N00797 N00763 N00741 N00741 ORBIT2L2P  
++ L=2u  
++ W=108u         
+M_M3         N00886 N00790 N00797 N00797 ORBIT2L2P  
++ L=2u  
++ W=200u         
+M_M4         N00921 VOUT N00797 N00797 ORBIT2L2P  
++ L=2u  
++ W=200u         
+M_M5         N00886 N00886 0 0 ORBIT2L2N  
++ L=2u  
++ W=200u         
+M_M6         N00913 N00886 0 0 ORBIT2L2N  
++ L=2u  
++ W=200u         
+M_M7         N00921 N00917 N00913 N00913 ORBIT2L2N  
++ L=2u  
++ W=200u         
+M_M8         VOUT N00763 N00741 N00741 ORBIT2L2P  
++ L=2u  
++ W=100u         
+M_M9         VOUT N00921 0 0 ORBIT2L2N  
++ L=2u  
++ W=100u         
+I_IREF         N00763 0 DC 100uA  
+V_VDD         N00741 0 2.5V
+V_VB1         N00917 0 1.0575V
+R_R1         N00953 N00921  1.5k TC=0,0 
+C_C1         N00953 VOUT  10pF  TC=0,0 
+C_CL         VOUT 0  20pF  TC=0,0 
+V_V1         N00790 0  
++PULSE 0V 2.5V 0s 1ps 1ps 1us 2us
+
+**** RESUMING pj2full.cir ****
+.END
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M4, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M4, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model ORBIT2L2N: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M6, model ORBIT2L2N: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M7, model ORBIT2L2N: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M9, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M9, model ORBIT2L2N: Ps = 0 is less than W
+
+INFO(ORPSIM-15454): Model ORBIT2L2P: Using BSIM VERSION 3.1 or lower
+
+INFO(ORPSIM-15454): Model ORBIT2L2N: Using BSIM VERSION 3.1 or lower
+
+**** 12/18/24 13:27:23 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pj2full"  [ c:\cadence\spb_17.2\save\project2_1-pspicefiles\schematic1\pj2full.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               ORBIT2L2P       ORBIT2L2N       
+               PMOS            NMOS            
+  T_Measured   27              27            
+   T_Current   27              27            
+       LEVEL    7               7            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    -.53918          .365477     
+          KP  369.979700E-06  369.979700E-06 
+       GAMMA    0               0            
+      LAMBDA    0               0            
+         RSH    3.2             4.6          
+          IS    1.000000E-15    1.000000E-15 
+          JS  100.000000E-06  100.000000E-06 
+          PB     .988958         .99         
+        PBSW     .8              .956305     
+          CJ    1.893734E-03    1.783380E-03 
+        CJSW  312.434700E-12  415.404100E-12 
+          MJ     .470513         .46613      
+        MJSW     .278699         .316246     
+        CGSO  536.000000E-12  459.000000E-12 
+        CGDO  536.000000E-12  459.000000E-12 
+        CGBO  500.000000E-12  500.000000E-12 
+         TOX    5.600000E-09    5.600000E-09 
+          XJ  100.000000E-09  100.000000E-09 
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA     .01             .01         
+      DIOMOD    2               2            
+          K1     .653671         .473221     
+          K2   -3.798458E-03  799.453200E-06 
+        LETA    0               0            
+        WETA    0               0            
+          U0  100.1452        280.4589       
+       XPART     .5              .5          
+        VTH0    -.53918          .365477     
+          K3     .097173        1.000000E-03 
+          W0    1.003172E-06  100.000000E-09 
+         NLX   14.108110E-09  161.789800E-09 
+        DVT0    2.36446          .455178     
+        DVT1     .70933          .625869     
+          UA  892.139700E-12   -1.607126E-09 
+          UB    1.000000E-21    2.806549E-18 
+          UC -100.000000E-12   32.900510E-12 
+        VSAT  150.011100E+03  107.496000E+03 
+        RDSW    1.590053E+03  200            
+        VOFF    -.127781        -.091096     
+     NFACTOR     .912034        1.202941     
+        PCLM    1.498792        1.510109     
+      PDIBL1    3.684125E-03     .897659     
+      PDIBL2  992.371900E-12    2.924029E-03 
+       DROUT     .056642        1            
+      PSCBE1   60.949850E+09  701.773800E+06 
+      PSCBE2   13.733300E-09  227.110900E-06 
+          A0     .908735        1.877044     
+          A1     .042918       83.171450E-06 
+          A2     .300003         .659235     
+       NPEAK  415.890000E+15  235.490000E+15 
+         LDD    0               0            
+        LITL   40.987800E-09   40.987800E-09 
+         UA1    4.310000E-09    4.310000E-09 
+         UB1   -7.610000E-18   -7.610000E-18 
+         UC1  -56.000000E-12  -56.000000E-12 
+        PVAG  498.930000E-06    8.531511E-03 
+        KETA     .013631       -8.698410E-03 
+        ETA0     .553206        5.073200E-03 
+        ETAB    -.166008       62.620080E-06 
+         K3B   10.01852         3.071349     
+        DVT2    -.142211        -.5          
+        DSUB    1.380632         .031003     
+      MOBMOD    1               1            
+         AGS     .071311         .331018     
+       DVT1W    0               0            
+       DVT2W    0               0            
+        PRWG  913.163000E-06     .447748     
+        PRWB    -.039416         .020818     
+     PDIBLCB -864.657100E-06     .065131     
+         DWG  -45.274940E-09  -22.841900E-09 
+         DWB  -97.660700E-12 -695.781000E-12 
+          B0    1.042306E-06  -31.735240E-09 
+          B1    4.969179E-06 -100.000000E-09 
+        LINT   30.771480E-09  139.255800E-12 
+         DLC   30.771480E-09  139.255800E-12 
+         DWC    0               0            
+          CF    0               0            
+        NOIA    9.900000E+18  100.000000E+18 
+        NOIB    2.400000E+03   50.000000E+03 
+        NOIC    1.400000E-12   -1.400000E-12 
+       LKETA   -6.955847E-03   -3.316880E-03 
+       WKETA     .025516         .012098     
+       PVTH0    5.106904E-03   -9.648921E-03 
+       PRDSW  -20             -10            
+         PK2    2.415262E-03    3.534961E-03 
+         VTM     .025864         .025864     
+     VERSION    3.1             3.1          
+       PBSWG     .8              .956305     
+       MJSWG     .278699         .316246     
+       CJSWG  312.434700E-12  415.404100E-12 
+
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M1, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M2, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M3, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model ORBIT2L2P: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M8, model ORBIT2L2P: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M5, model ORBIT2L2N: Ps = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M9, model ORBIT2L2N: Pd = 0 is less than W
+
+WARNING(ORPSIM-15235): Mosfet M_M9, model ORBIT2L2N: Ps = 0 is less than W
+
+**** 12/18/24 13:27:23 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pj2full"  [ c:\cadence\spb_17.2\save\project2_1-pspicefiles\schematic1\pj2full.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VOUT)    2.5000  (N00741)    2.5000 (N00763)    1.2623 (N00790)    0.0000     
+
+(N00797)    1.0510 (N00886)     .6251 (N00913) 216.8E-12 (N00917)    1.0575     
+
+(N00921) 289.9E-12 (N00953) 289.9E-12 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VDD       -6.444E-04
+    V_VB1        0.000E+00
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.61E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/18/24 13:27:23 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pj2full"  [ c:\cadence\spb_17.2\save\project2_1-pspicefiles\schematic1\pj2full.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .70
+

@@ -29,8 +29,8 @@ The amplifier was designed to achieve high open-loop gain, wide gain-bandwidth p
 
 ## Screenshots
 > Add here:
-- `schematic.png`
-- `layout.png`
-- `gain_plot.png`
-- `phase_margin.png`
-- `slew_rate.png`
+![image](https://github.com/user-attachments/assets/85bf5b3f-5fd5-48c2-9535-884f93acf186)
+![image](https://github.com/user-attachments/assets/3585d7ab-237d-4df6-9d28-449416139208)
+![image](https://github.com/user-attachments/assets/d4b72f7b-0232-4021-92da-2765bede2d7d)
+![image](https://github.com/user-attachments/assets/46afe304-3655-4e9d-b472-6bd0397ac32f)
+![image](https://github.com/user-attachments/assets/68c784e8-5c91-4e48-924b-88560c7be0af)
